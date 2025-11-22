@@ -6,7 +6,7 @@ It hides encrypted data inside PNG images using **LSB Steganography + AES-256-CB
 
 Released on **PyPI**, installable with:
 
-pip install cripstegz
+pipx install cripstegz
 
 
 ---
@@ -47,7 +47,7 @@ Supports both encode → and decode ←:
 
 Install globally from PyPI:
 
-pip install cripstegz
+pipx install cripstegz
 
 
 Run using:
