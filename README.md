@@ -1,51 +1,146 @@
-# CRIPSTEGZ
+# 🔐 CRIPSTEGZ  
+### Image Steganography + Crypto Tool (AES-256-CBC)
 
-CRIPSTEGZ is a Python-based cybersecurity tool that combines:
+CRIPSTEGZ is a combined **steganography + cryptography** tool written in Python.  
+It hides encrypted data inside PNG images using **LSB Steganography + AES-256-CBC** and also provides **crypto encoding/decoding utilities**.
 
-## 🔐 Image Steganography (AES-256-CBC)
-- Hide **messages** or **files** inside images  
-- AES-256 encrypted payload  
-- LSB-based image steganography  
-- PNG/BMP/TIFF supported  
-- JPG not recommended (lossy)
+Released on **PyPI**, installable with:
 
-## 🔣 Crypto Encode/Decode
-Supports both encoding & decoding for:
+pip install cripstegz
+
+
+---
+
+## 🚀 Features
+
+### 🖼 Steganography
+- LSB (Least Significant Bit) Image Steganography  
+- AES-256-CBC encrypted payload inside image pixels  
+- Supports: **PNG, BMP, TIFF**  
+- Auto-converts output to **.png**  
+- Hide **text or binary files** inside images  
+
+### 🔑 Crypto Encoding / Decoding
+Supports both encode → and decode ←:
 - Base64  
 - Hex  
 - ROT13  
-- ROT-N  
-- XOR (with key)  
+- ROT-N (any shift 1–25)  
+- XOR (key-based)  
 - Binary ↔ Text  
-- URL Encode/Decode  
-- Baconian Cipher (A/B)
+- URL Encode / Decode  
+- Baconian Cipher (A/B pattern)
 
-## 🔍 Hash Identifier
-Identifies:
-- MD5  
-- SHA1  
-- SHA256  
-- SHA512  
-- CRC32 (32-bit checksum)
+### 🧩 Hash Utility
+- Identifies common hash types:
+  - MD5  
+  - SHA1  
+  - SHA256  
+  - SHA512  
+  - Generic Base64-like strings  
 
-*(No cracking — only identification)*
-
----
-
-## ▶️ Running the tool
-
-Run:
-
-python3 cripstegz.py
-
+(No hash cracking.)
 
 ---
 
-## 📁 Project Status
-This repository contains the complete standalone tool.  
-A PyPI package version will be released soon.
+## 📦 Installation
+
+Install globally from PyPI:
+
+pip install cripstegz
+
+
+Run using:
+
+cripstegz
+
 
 ---
 
-## 👤 Author
-**Mohammed Assad (alias Ro0tk1e)**
+## 📚 Usage
+
+### ➤ Start the tool
+
+cripstegz
+
+
+### ➤ Main Menu
+
+    Steganography
+
+    Crypto
+
+    Hash Identifier
+
+    Exit
+
+
+### ➤ Encode text into an image
+- Choose "Steganography"
+- Choose "Encode (Steg)"
+- Provide:
+  - Cover image  
+  - Secret text OR `@file:<path>`  
+  - Password  
+  - Output name (auto .png)
+
+### ➤ Decode hidden data
+- Choose "Decode (Steg)"
+- Provide:
+  - Stego image  
+  - Password  
+
+---
+
+## 📥 Example
+
+Cover image: test.png
+Message: Secret data here
+Password: asd123
+Output: hidden.png
+
+[+] Hidden payload saved as hidden.png
+
+
+---
+
+## 📌 Requirements
+
+CRIPSTEGZ requires the following Python libraries:
+
+Pillow
+pycryptodome
+
+
+These install automatically when using `pip install cripstegz`.
+
+---
+
+## 📁 Project Structure
+
+cripstegz/
+cli.py
+init.py
+pyproject.toml
+README.md
+
+
+---
+
+## 👨‍💻 Author
+
+**Mohammed Assad**  
+Alias: **Ro0tk1e**  
+Cybersecurity & Steganography Enthusiast  
+GitHub: https://github.com/Ro0tk1e
+
+---
+
+## 🏆 License
+MIT License – free for personal & educational use.
+
+---
+
+## ⭐ Support the Project
+If you like it, star the GitHub repo 🙌  
+More updates & features coming soon.
